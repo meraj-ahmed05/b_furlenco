@@ -1,0 +1,108 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:ital,wght@0,300;0,500;0,600;0,700;1,400&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Kanit&family=Montserrat:wght@300;400;500;600;700&family=Poppins:ital,wght@0,300;0,500;0,600;0,700;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --primary-font : 'Poppins', sans-serif;
+  --secondary-font : 'Montserrat', sans-serif;
+  --header-font : 'Dancing Script', cursive;
+/* font-family: 'Kanit', sans-serif; */
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body{
+  background-color: #E7E7E7;
+  overflow-x: hidden;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: var(--primary-font);
+  @apply text-slate-800 
+}
+
+p,input,textarea,a, button, select, option{
+  font-family: var(--secondary-font);
+  @apply text-slate-600
+}
+
+button > span {
+  font-family: var(--secondary-font);
+}
+
+a > span {
+  font-family: var(--secondary-font);
+}
+
+input,textarea{
+  @apply w-full border-none bg-transparent p-2 font-semibold outline-none text-sm resize-none
+}
+
+body::-webkit-scrollbar-thumb{
+  width: 2px;
+  background-color: gray;
+}
+
+body::-webkit-scrollbar{
+  width: .2rem;
+}
+
+hr{
+  @apply border-slate-400
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb{
+  width: 2px;
+  background-color: gray;
+}
+
+.custom-scrollbar::-webkit-scrollbar{
+  width: .3rem;
+}
+
+.no-scrollbar::-webkit-scrollbar{
+  width: 0;
+}
+
+.logo{
+  font-family: var(--header-font);
+  @apply text-3xl;
+}
+
+.paymentMethod-active{
+  @apply bg-[#4847fa] text-slate-200
+}
+
+.login-active{
+  @apply bg-[#fafaff] rounded-3xl rounded-b-none;
+}
+
+.login-deactive{
+  @apply rounded-3xl rounded-t-none bg-slate-200;
+}
+
+.login-div-active{
+  @apply bg-slate-200;
+}
+
+
+.login-div-deactive{
+  @apply bg-[#fafaff];
+}
+
+
+.custom-outer-shadow{
+  box-shadow: -5px -5px 10px #FAFBFF, 5px 5px 10px 0 #161b1d30;
+}
+
+.custom-shadow{
+  box-shadow: 0px 0px 10px #FAFBFF, 0px 5px 10px 0 #161b1d30;
+}
