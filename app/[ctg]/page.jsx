@@ -36,7 +36,7 @@ async function getServerSideProps(category){
 
 const Page = async ({params}) => {
     const {ctg} = params
-
+    
     const {items} = await getServerSideProps((ctg.toLowerCase()));
 
     if(!items){

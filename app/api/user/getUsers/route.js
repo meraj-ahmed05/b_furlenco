@@ -23,8 +23,6 @@ export async function GET(request){
         users.push({...us, ...det})
       }
 
-      console.log(users)
-      
       return NextResponse.json({success: true, users});
 
     }catch(err){

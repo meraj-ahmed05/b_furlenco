@@ -148,7 +148,7 @@ const Page = () => {
                 <label htmlFor={`category-${ctg._id}`} key={ctg._id}>
                   <div className={`${filter.category === ctg.category && "bg-gradient-to-r from-[#d1d1d1] to-[#b6b6b6]"} hover:bg-[#d1d1d1] transition-all rounded-l-lg flex items-center space-x-4 p-2 cursor-pointer`}>
                     <input checked={filter.category === ctg.category} type="radio" onChange={handleChange} value={ctg.category} name="category" id={`category-${ctg._id}`} className="h-4 w-4 accent-[#7079a8]" />
-                    <span className="capitalize font-normal cursor-pointer">{ctg.category}</span>
+                    <span className="capitalize font-normal cursor-pointer">{ctg.category.replace('-', ' ')}</span>
                   </div>
                 </label>
               )

@@ -1,0 +1,22 @@
+[
+    { "category": "sofas" },
+    { "category": "chairs" },
+    { "category": "tables" },
+    { "category": "beds" },
+    { "category": "dressers" },
+    { "category": "nightstands" },
+    { "category": "wardrobes" },
+    { "category": "desks" },
+    { "category": "bookshelves" },
+    { "category": "tv-stands" },
+    { "category": "dining-tables" },
+    { "category": "coffee-tables" },
+    { "category": "console-tables" },
+    { "category": "recliners" },
+    { "category": "benches" },
+    { "category": "ottomans" },
+    { "category": "cabinets" },
+    { "category": "sideboards" },
+    { "category": "bar-stools" },
+    { "category": "patio-furniture" }
+]

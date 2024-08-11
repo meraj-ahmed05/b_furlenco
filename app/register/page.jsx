@@ -34,21 +34,19 @@ const Page = () => {
   const handleSubmit = async (e)=>{
     e.preventDefault();
 
-
     const userDetail = new FormData();
     userDetail.append('name', userDetails.name)
     userDetail.append('email', userDetails.email)
     userDetail.append('password', userDetails.password)
     if(userDetails.avatar)
       userDetail.append('avatar', userDetails.avatar, userDetails.avatar.name)
-
-    const data = await fetch(`/api/auth/register`,{
+    try {
+      const data = await fetch("http://localhost:3000/api/auth/register",{
       method: "POST",
-      headers: {
-        "Content-Type" : "application/json"
+      headers:{
+        "Content-Type": "application/json"
       },
       body: JSON.stringify(userDetails)
-      // body: JSON.stringify(userDetail)
     });
 
     const res = await data.json();
@@ -60,6 +58,10 @@ const Page = () => {
       }, 1100)
     } else{
       toast.error(res.msg, toastOptions)
+    }
+    } catch (error) {
+      console.log(error);
+       
     }
 
   }

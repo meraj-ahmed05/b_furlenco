@@ -26,7 +26,7 @@ export async function GET( request ){
     //     products = await productModel.find().sort({updatedAt: -1});
     // }
 
-    msg = `Search Result For ${ctg} ${search}`
+    msg = `Search Result For ${ctg.replace('-', ' ')} ${search}`
 
     products = await productModel.find({
         $or: [
